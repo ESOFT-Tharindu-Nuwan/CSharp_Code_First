@@ -1,0 +1,25 @@
+﻿@model Book
+
+<h1>Create Books</h1>
+<form asp-action="Create" method="post">
+	<div class="mb-3">
+		<label for="exampleFormControlInput1" class="form-label">Book Name</label>
+		<input asp-for="Name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter the book name here...">
+	</div>
+	<div class="mb-3">
+		<label for="exampleFormControlInput1" class="form-label">Author Name</label>
+		<input asp-for="Author" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter the author name here...">
+	</div>
+	<div class="mb-3">
+		<label for="exampleFormControlInput1" class="form-label">Date of Publish</label>
+		<input asp-for="DateOfPublish" type="date" class="form-control" id="exampleFormControlInput1" placeholder="Select the date of publish from here...">
+	</div>
+
+	<div class="mt-2 d-flex justify-content-between">
+		<button type="submit" class="btn btn-success">Submit</button>
+		<button asp-controller="Book" asp-action="Index" class="btn btn-warning">Cancel</button>
+	</div>
+</form>
+
+
+

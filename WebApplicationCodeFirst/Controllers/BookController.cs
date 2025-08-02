@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebApplicationCodeFirst.Models;
 
 namespace WebApplicationCodeFirst.Controllers
 {
@@ -15,6 +16,21 @@ namespace WebApplicationCodeFirst.Controllers
         {
             var books = _context.Books.ToList();
             return View(books);
+        }
+
+        // GET: Book/Create
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: Book/Create
+        [HttpPost]
+        public IActionResult Create(Book book)
+        {
+            _context.Books.Add(book);
+            _context.SaveChanges();
+            return View();
         }
     }
 }
