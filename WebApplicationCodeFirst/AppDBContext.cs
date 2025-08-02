@@ -13,5 +13,6 @@ namespace WebApplicationCodeFirst
         public DbSet<StudentModel> Students { get; set; }
 
         public DbSet<Lecturer> Lecturers { get; set; }
+        public DbSet<Book> Books { get; set; }
     }
 }
